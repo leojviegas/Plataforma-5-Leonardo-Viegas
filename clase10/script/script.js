@@ -1,7 +1,7 @@
 function fechaYHora() {
     console.log("hoy es " + Date())
     alert("Mire la consola");
-    alert("Bueno, siendo que es muy vago para abrirla... hoy es " + Date );
+    alert("Bueno, siendo que es muy vago para abrirla... hoy es " + Date() );
 }
 function pedirNombre() {
     let nombre1 = prompt("¿Cual es tu nombre?")
