@@ -227,37 +227,40 @@ function piedraPapelTijera() {
 
         if (inputUser == "piedra" || inputUser == "papel" || inputUser == "tijera") {
 
+
+            
+
             if (inputUser == "piedra") {
                 switch (x) {
-                    case 1: alert("Tú: Piedra \n computadora: Piedra\nEmpate!")
+                    case 1: alert("Tú: Piedra \n Computadora: Piedra\n\nEmpate!")
                         break
-                    case 2: alert("Perdiste!")
+                    case 2: alert("Tú: Piedra \n Computadora: Papel\n\nPerdiste!")
                         break
-                    default: alert("Ganaste!")
+                    default: alert("Tú: Piedra \n Computadora: Tijera\n\nGanaste!")
                 }
             }
             if (inputUser == "papel") {
                 switch (x) {
-                    case 1: alert("Ganaste!")
+                    case 1: alert("Tú: Papel \n Computadora: Piedra\n\nGanaste!")
                         break
-                    case 2: alert("Empate!")
+                    case 2: alert("Tú: Papel \n Computadora: Papel\n\nEmpate!")
                         break
-                    default: alert("Perdiste!")
+                    default: alert("Tú: Papel \n Computadora: Tijera\n\nPerdiste!")
                 }
             }
             if (inputUser == "tijera") {
                 switch (x) {
-                    case 1: alert("Perdiste!")
+                    case 1: alert("Tú: Tijera \n Computadora: Piedra\n\nPerdiste!")
                         break
-                    case 2: alert("Ganaste!")
+                    case 2: alert("Tú: Tijera \n Computadora: Papel\n\nGanaste!")
                         break
-                    default: alert("Empate!")
+                    default: alert("Tú: Tijera \n Computadora: Tijera\n\nEmpate!")
                 }
             }
         } else {
             alert("No eligió ninguna de las opciones dadas")
         }
-        let volverAJugar = prompt("Desea volver a jugar? Responda con 'si'  o con 'no' ").toLowerCase()
+        let volverAJugar = prompt("Deseas volver a jugar? \nRespondo con 'Si'  o con 'No' ").toLowerCase()
 
         while (volverAJugar !== "si" && volverAJugar !== "no") {
             alert("Por favor, responda solo con 'si' o con 'no' ")
