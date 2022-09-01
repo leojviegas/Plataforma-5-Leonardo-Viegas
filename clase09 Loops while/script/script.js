@@ -25,6 +25,7 @@ function reloj() {
         segundero = 0
         minutero++
     }
+    alert("Mire la consola! (con F12)")
 }
 
 function multiploDe20() {
@@ -35,7 +36,7 @@ function multiploDe20() {
         }
         num++
     }
-
+    alert("Mire la consola! (con F12)")
 }
 function numEntre10Y19() {
 
@@ -45,6 +46,7 @@ function numEntre10Y19() {
         console.log(numero);
         numero++;
     }
+    alert("Mire la consola! (con F12)")
 }
 
 function paresEntre10Y40() {
@@ -57,6 +59,7 @@ function paresEntre10Y40() {
         numero++;
 
     }
+    alert("Mire la consola! (con F12)")
 }
 
 function numDivPor5Y3() {
@@ -69,6 +72,7 @@ function numDivPor5Y3() {
         numero++;
 
     }
+    alert("Mire la consola! (con F12)")
 }
 
 
@@ -121,7 +125,7 @@ function fizzBuzz() {
 
         numero++
     }
-
+    alert("Mire la consola! (con F12)")
 }
 
 function numerosPrimos() {
@@ -150,7 +154,7 @@ function numerosPrimos() {
             x++
         }
         if (noPrimeFound == false) {
-            alert("Mire la consola!")
+            alert("Mire la consola! (con F12)")
         }
         else {
             alert("No se encontró ningún número primo en ese rango")
@@ -225,7 +229,7 @@ function piedraPapelTijera() {
 
             if (inputUser == "piedra") {
                 switch (x) {
-                    case 1: alert("Empate!")
+                    case 1: alert("Emp" + /r/n + "ate!")
                         break
                     case 2: alert("Perdiste!")
                         break
@@ -359,5 +363,5 @@ function productoAcumulado() {
         p *= i;
     }
     console.log(p)
-    alert("Mire la consola (con F12)")
+    alert("Mire la consola! (con F12)")
 }
