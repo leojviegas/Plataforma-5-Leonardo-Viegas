@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css, posicionamiento de divs. tags section, nav y div</title>
+    <link rel="stylesheet" href="../indexStyle.css/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .p1 {
+            width: 50%;
+            background-color: lightblue;
+            margin: 10px;
+            margin-top: 25px;
+            border: 4px solid;
+            border-color: red;
+            padding: 10px 15px 20px 25px;
+            box-sizing: content-box;
+        }
+
+        .div1 {
+            background-color: lightcoral;
+            height: 300px;
+            width: 50%;
+            margin: 10px;
+
+        }
+
+        .div2 {
+            background-color: lightgreen;
+            height: 50%;
+            width: 90%;
+            margin: auto;
+        }
+
+        .div3 {
+            background-color: lightblue;
+            height: 20%;
+            width: 80%;
+            margin: auto;
+            align-items: center;
+            align-self: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Css: modelado de cajas. Tags section, nav, div, flex containers</h1>
+
+    <div class="div1">
+        <p>este es el div1</p>
+        <div class="div2">
+            <p> este es el div2</p>
+            <div class="div3">
+                <p>y este es el div3</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="p1">
+        <p>Qué es el modelado de cajas?</p>
+    </div>
+    <!-- <p>se puede "comentar el código" (ponerlo en formato comentario, para que no sea realmetne código) seleccionandolo y tocando ctrl+ç  </p> -->
+
+    <p>
+        <a href="./panchito/panchito.html">Pachito</a>
+    </p>
+    <p>
+        <a href="./flexContainer/flexContainer.html">Flex Container</a>
+    </p>
+    <p>
+        <a href="../index.html">BACK TO HOME PAGE</a>
+    </p>
+</body>
+
+</html>

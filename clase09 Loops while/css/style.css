@@ -1,0 +1,45 @@
+* {
+   margin: 0;
+   box-sizing: border-box;
+
+}
+
+body {
+   background-color: darkcyan;
+}
+
+
+
+.fontSize30 {
+   font-size: 30px;
+}
+
+.BGClightgreen {
+   background-color: lightgreen;
+}
+
+.fontSize20 {
+   font-size: 20px;
+}
+
+p {
+   font-size: 15px;  
+}
+
+h1 {
+   font-size: 45px;
+   text-align: center;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.demoreel {
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 25px;
+}
+
+.buttons {
+   margin: 10px;
+   padding: 20px;
+
+}

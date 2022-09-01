@@ -1,0 +1,30 @@
+.password {
+    -webkit-text-security: disc;
+}
+body{
+    background-color: lemonchiffon;
+ }
+ .fontSize30 {
+    font-size: 30px;
+ }
+ .BGClightgreen{
+    background-color: lightgreen;
+ }
+.fontSize20 {
+   font-size: 20px;
+}
+p {
+   font-size: 15px;
+}
+
+.comentarioInput {
+    height: 150px;
+    width: 500px;
+    
+}
+.comentarioLabel {
+    width: auto;
+}
+.encuesta {
+    background-color: lightgreen;
+}

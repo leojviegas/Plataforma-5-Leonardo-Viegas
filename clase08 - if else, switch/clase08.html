@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../indexStyle.css/style.css">
+    <title>Funciones en JavaScript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            color: white;
+        }
+
+        .buttons {
+            margin: 15px;
+            padding: 20px;
+            border-style: solid;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TIPOS DE FUNCIONES</h1>
+    <p>
+        let, const, var
+    </p>
+    <p>let= se puede modificar (EJ: yo podria hacer let nombre = 2; nombre = nombre + 1; ahora la variable llamada
+        "nombre" vale "3"</p>
+    <p>const = no se puede modificar (EJ: yo NO podría hacer nombre = nombre + 1, porque la estaría modificando</p>
+    <p>var = se puede modificar, y aparte se puede declarar dos veces la misma variabe. Por eso, NO la vamos a utilizar
+        (cada vez está quedando más en desuso)</p>
+    <h2>PROMPT</h2>
+    <p>el <i>prompt</i> es para pedirle al usuario que meta una data, que luego se puede usar como variable</p>
+
+
+    <button class="buttons" onclick=bar()>Puedo pasar al bar?</button>
+    <button class="buttons" onclick=traductor()>Traductor</button>
+    <button class="buttons" onclick=valoracionPelicula()>Valoración de la película</button>
+    <p>
+        <a href="../index.html">BACK TO HOME PAGE</a>
+    </p>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

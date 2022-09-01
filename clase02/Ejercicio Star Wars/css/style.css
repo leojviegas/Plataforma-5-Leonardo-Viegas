@@ -1,0 +1,49 @@
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_1280.png);
+    font-family: 'days one', sans-serif;
+}
+
+.bgRed {
+    background-color: red;
+    color: white;
+}
+
+.bgBlue {
+    background-color: blue;
+    color: white;
+}
+
+#darthVader {
+    font-size: 50px;
+}
+
+#lukeSkywalker {
+    font-style: italic;
+}
+
+.border10 {
+    border: 10px;
+    border-style: dashed groove solid dotted;
+}
+
+.letterSpacing5 {
+    letter-spacing: 5px;
+}
+
+.apoyo {
+    text-align: center;
+}
+
+.allUppercase {
+    text-transform: uppercase;
+}
+
+#spanDarthVader {
+    font-size: 80px;
+    margin: 50px;
+}
+
+#spanLuke {
+    font-size: 80px;
+    margin: 70px;
+}

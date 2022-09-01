@@ -1,0 +1,40 @@
+body {
+    background-color: lightcyan;
+}
+.div1 {
+    height: 75px;
+    width: 740px;
+    margin: auto;
+    background-color: #deb887;
+    border-radius: 70px 70px 15px 15px;
+    border-bottom: 20px solid #b5956c;
+
+}
+
+.div2 {
+    height: 100px;
+    width: 800px;
+    background-color: #a52b2a;
+    margin: auto;
+    border-radius: 70px;
+}
+
+.div3 {
+    height: 75px;
+    width: 740px;
+    background-color: #deb887;
+    margin: auto;
+    border-radius: 15px 15px 70px 70px;
+    border-top: 20px solid #b5956c;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.backLink {
+    font-size: large;
+    text-align: center;
+}
