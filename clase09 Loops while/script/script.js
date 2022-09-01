@@ -225,41 +225,40 @@ function piedraPapelTijera() {
         let x = Math.floor((Math.random()) * 3 + 1);
         let inputUser = prompt("Elige: Piedra, papel o tijera").toLowerCase();
 
-        if (inputUser == "piedra" || inputUser == "papel" || inputUser == "tijera") {
-
-
+        if (inputUser != "piedra" && inputUser != "papel" && inputUser != "tijera")
+            while (inputUser != "piedra" && inputUser != "papel" && inputUser != "tijera") {
+                alert("No elegiste ninguna de las opciones dadas")
+                inputUser = prompt("Elige: Piedra, papel o tijera").toLowerCase();
+            }
             
-
-            if (inputUser == "piedra") {
-                switch (x) {
-                    case 1: alert("Tú: Piedra \n Computadora: Piedra\n\nEmpate!")
-                        break
-                    case 2: alert("Tú: Piedra \n Computadora: Papel\n\nPerdiste!")
-                        break
-                    default: alert("Tú: Piedra \n Computadora: Tijera\n\nGanaste!")
-                }
+        if (inputUser == "piedra") {
+            switch (x) {
+                case 1: alert("Tú: Piedra \nComputadora: Piedra\n\nEmpate!")
+                    break
+                case 2: alert("Tú: Piedra \nComputadora: Papel\n\nPerdiste!")
+                    break
+                default: alert("Tú: Piedra \nComputadora: Tijera\n\nGanaste!")
             }
-            if (inputUser == "papel") {
-                switch (x) {
-                    case 1: alert("Tú: Papel \n Computadora: Piedra\n\nGanaste!")
-                        break
-                    case 2: alert("Tú: Papel \n Computadora: Papel\n\nEmpate!")
-                        break
-                    default: alert("Tú: Papel \n Computadora: Tijera\n\nPerdiste!")
-                }
-            }
-            if (inputUser == "tijera") {
-                switch (x) {
-                    case 1: alert("Tú: Tijera \n Computadora: Piedra\n\nPerdiste!")
-                        break
-                    case 2: alert("Tú: Tijera \n Computadora: Papel\n\nGanaste!")
-                        break
-                    default: alert("Tú: Tijera \n Computadora: Tijera\n\nEmpate!")
-                }
-            }
-        } else {
-            alert("No eligió ninguna de las opciones dadas")
         }
+        if (inputUser == "papel") {
+            switch (x) {
+                case 1: alert("Tú: Papel \nComputadora: Piedra \n\nGanaste!")
+                    break
+                case 2: alert("Tú: Papel \nComputadora: Papel \n\nEmpate!")
+                    break
+                default: alert("Tú: Papel \nComputadora: Tijera \n\nPerdiste!")
+            }
+        }
+        if (inputUser == "tijera") {
+            switch (x) {
+                case 1: alert("Tú: Tijera \nComputadora: Piedra\n\nPerdiste!")
+                    break
+                case 2: alert("Tú: Tijera \nComputadora: Papel\n\nGanaste!")
+                    break
+                default: alert("Tú: Tijera \nComputadora: Tijera\n\nEmpate!")
+            }
+        }
+
         let volverAJugar = prompt("Deseas volver a jugar? \nRespondo con 'Si'  o con 'No' ").toLowerCase()
 
         while (volverAJugar !== "si" && volverAJugar !== "no") {
