@@ -1,12 +1,16 @@
 function fechaYHora() {
     console.log("hoy es " + Date())
+    alert("Mire la consola");
+    alert("Bueno, siendo que es muy vago para abrirla... hoy es " + Date );
 }
 function pedirNombre() {
     let nombre1 = prompt("¿Cual es tu nombre?")
     let nombre2 = prompt("¿Cual es tu segundo nombre?")
     let nombre3 = prompt("¿Cual es tu apellido?")
+    
 
     saludar2(nombre1, nombre2, nombre3)
+    alert("Mire la consola");
 }
 
 // función normal:
