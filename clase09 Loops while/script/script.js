@@ -220,17 +220,7 @@ function piedraPapelTijera() {
     let loop = true
     userScore = 0
     pcScore = 0
-    let evalPuntaje = (a, b) => {
-        if (a > b) {
-            return "Enhorabuena!"
-        }
-        if (a < b) {
-            return "Mejor suerte la próxima"
-        }
-        if (a == b) {
-            return "Estuvo parejo, la próxima seguro ganas"
-        }
-    }
+
     while (loop == true) {
 
 
@@ -286,6 +276,17 @@ function piedraPapelTijera() {
         if (volverAJugar == "no") {
             loop = false
             alert("Puntaje:\n\nTú: " + userScore + "\n" + "Computadora: " + pcScore + "\n" + evalPuntaje(userScore, pcScore))
+            let evalPuntaje = (a, b) => {
+                if (a > b) {
+                    return "Enhorabuena!"
+                }
+                if (a < b) {
+                    return "Mejor suerte la próxima..."
+                }
+                if (a == b) {
+                    return "Estuvo parejo, la próxima seguro ganas"
+                }
+            }
         }
     }
 
