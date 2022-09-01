@@ -276,7 +276,8 @@ function piedraPapelTijera() {
         if (volverAJugar == "no") {
             loop = false
             alert("Puntaje:\n\nTú: " + userScore + "\n" + "Computadora: " + pcScore + "\n" + evalPuntaje(userScore, pcScore))
-            let evalPuntaje = (a, b) => {
+            
+            function evalPuntaje(a, b) {
                 if (a > b) {
                     return "Enhorabuena!"
                 }
