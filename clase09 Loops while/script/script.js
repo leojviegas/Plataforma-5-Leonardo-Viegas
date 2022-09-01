@@ -223,13 +223,13 @@ function piedraPapelTijera() {
 
 
         let x = Math.floor((Math.random()) * 3 + 1);
-        let inputUser = prompt("Elija: Piedra, papel o tijera").toLowerCase();
+        let inputUser = prompt("Elige: Piedra, papel o tijera").toLowerCase();
 
         if (inputUser == "piedra" || inputUser == "papel" || inputUser == "tijera") {
 
             if (inputUser == "piedra") {
                 switch (x) {
-                    case 1: alert("Emp" + /r/n + "ate!")
+                    case 1: alert("Tú: Piedra \n computadora: Piedra\nEmpate!")
                         break
                     case 2: alert("Perdiste!")
                         break
