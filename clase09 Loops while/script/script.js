@@ -230,7 +230,7 @@ function piedraPapelTijera() {
                 alert("No elegiste ninguna de las opciones dadas")
                 inputUser = prompt("Elige: Piedra, papel o tijera").toLowerCase();
             }
-            
+
         if (inputUser == "piedra") {
             switch (x) {
                 case 1: alert("Tú: Piedra \nComputadora: Piedra\n\nEmpate!")
@@ -259,11 +259,11 @@ function piedraPapelTijera() {
             }
         }
 
-        let volverAJugar = prompt("Deseas volver a jugar? \nRespondo con 'Si'  o con 'No' ").toLowerCase()
+        let volverAJugar = prompt("Deseas volver a jugar? \nResponda con 'Si'  o con 'No' ").toLowerCase()
 
         while (volverAJugar !== "si" && volverAJugar !== "no") {
             alert("Por favor, responda solo con 'si' o con 'no' ")
-            volverAJugar = prompt("Desea volver a jugar? Responda con 'si'  o con 'no' ").toLowerCase()
+            volverAJugar = prompt("Desea volver a jugar? \nResponda con 'Si'  o con 'No' ").toLowerCase()
         }
         if (volverAJugar == "no") {
             loop = false
