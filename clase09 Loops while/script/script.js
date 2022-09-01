@@ -218,6 +218,8 @@ function cualEsElMayor() {
 
 function piedraPapelTijera() {
     let loop = true
+    userScore = 0
+    pcScore = 0
 
     while (loop == true) {
 
@@ -236,24 +238,30 @@ function piedraPapelTijera() {
                 case 1: alert("Tú: Piedra \nComputadora: Piedra\n\nEmpate!")
                     break
                 case 2: alert("Tú: Piedra \nComputadora: Papel\n\nPerdiste!")
+                    pcScore++
                     break
                 default: alert("Tú: Piedra \nComputadora: Tijera\n\nGanaste!")
+                    userScore++
             }
         }
         if (inputUser == "papel") {
             switch (x) {
                 case 1: alert("Tú: Papel \nComputadora: Piedra \n\nGanaste!")
+                    userScore++
                     break
                 case 2: alert("Tú: Papel \nComputadora: Papel \n\nEmpate!")
                     break
                 default: alert("Tú: Papel \nComputadora: Tijera \n\nPerdiste!")
+                    pcScore++
             }
         }
         if (inputUser == "tijera") {
             switch (x) {
                 case 1: alert("Tú: Tijera \nComputadora: Piedra\n\nPerdiste!")
+                    pcScore++
                     break
                 case 2: alert("Tú: Tijera \nComputadora: Papel\n\nGanaste!")
+                    userScore++
                     break
                 default: alert("Tú: Tijera \nComputadora: Tijera\n\nEmpate!")
             }
@@ -267,6 +275,7 @@ function piedraPapelTijera() {
         }
         if (volverAJugar == "no") {
             loop = false
+            alert("Tu puntaje: " + userScore + "\n" + "Computadora: " + pcScore )
         }
     }
 }
