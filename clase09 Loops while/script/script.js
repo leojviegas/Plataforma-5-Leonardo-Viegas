@@ -220,7 +220,17 @@ function piedraPapelTijera() {
     let loop = true
     userScore = 0
     pcScore = 0
-
+    let sumaPuntaje = (a, b) => {
+        if (a > b) {
+            return "Enhorabuena!"
+        }
+        if (a < b) {
+            return "Mejor suerte la próxima"
+        }
+        if (a == b) {
+            return "Estuvo parejo, la próxima seguro ganas"
+        }
+    }
     while (loop == true) {
 
 
@@ -278,17 +288,7 @@ function piedraPapelTijera() {
             alert("Puntaje:\n\nTú: " + userScore + "\n" + "Computadora: " + pcScore + "\n" + sumaPuntaje(userScore, pcScore))
         }
     }
-    let sumaPuntaje = (a, b) => {
-        if (a>b) {
-            return "Enhorabuena!"
-        }
-        if (a<b) {
-            return "Mejor suerte la próxima"
-        }
-        if (a==b) {
-            return "Estuvo parejo, la próxima seguro ganas"
-        }
-    }
+
 }
 
 function adivinaNumero() {
