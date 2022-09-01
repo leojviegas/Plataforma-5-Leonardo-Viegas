@@ -275,7 +275,7 @@ function piedraPapelTijera() {
         }
         if (volverAJugar == "no") {
             loop = false
-            alert("Tu puntaje: " + userScore + "\n" + "Computadora: " + pcScore )
+            alert("Puntaje:\n\nTú: " + userScore + "\n" + "Computadora: " + pcScore )
         }
     }
 }
