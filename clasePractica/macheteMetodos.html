@@ -1,0 +1,69 @@
+<h1>ARRAYS</h1>
+    <p>
+        Arrays
+    </p>
+    <p>coleccion de objetos</p>
+
+    <h1>METODOS</h1>
+    <p>sirven para hacer cosas con los arrays</p>
+
+    <h3>METODO: push</h3>
+    <p>sirve para agregar un elemento al final de array, y te devuleve el lenght actualizado del array
+    </p>
+    <p>comidas.push("ravioles")</p>
+
+    <h3>METODO: pop</h3>
+    <p>sirve para quitar un elemento al final de array y lo va a retornar</p>
+    <p>comidas.pop()</p>
+
+    <h3>METODO: unshift</h3>
+    <p>añadir elementos al array, pero <em>al principio</em></p>
+
+    <h3>METODO: shift</h3>
+    <p>quitar elementos al array, pero <em>al principio</em></p>
+
+    <h3>METODO: indexOf</h3>
+    <p>busca si hay un elemento (que vos el establezcas) en el array. Si lo encuentra, te devuleve la posicion del
+        mismo. Si no lo encuentra, te devuelve -1</p>
+
+    <h3>METODO: slice</h3>
+    <p>sirve para crear una copia de nuestro arreglo original y este no se verá afectado</p>
+    <p>si NO le ponés parametros, te hace una copia exacta. si le ponés 2 parámetros( ej: 0, 3) te va a hacer una copia
+        solamente con la franja de elementos que le seleccionaste, <em>excluyendo el último</em></p>
+
+    <h3>METODO: splice</h3>
+    <p>sirve para SACAR,AGREGAR O REEMPLAZAR elementos a un array</p>
+    <p>let ejemplo.splice(param1, param2, param3 opcional) </p>
+    <ol>
+        <li>parametro 1: la posición a la que querés apuntar</li>
+        <li>parametro 2: la CANTIDAD de elementos hacia la deracha que querés sacar, inclusive el de la posicion en la
+            que estás</li>
+        <li>parametro 3 en adelantes -opcionales-: si querés agregar un elemento en la posicion en la que estás apuntando con parámetro 1, podés agregarlo acá</li>
+    </ol>
+    <p>let arrayHola = ["hola", "hello", "konichiwa", "oi", "ciao"]</p>
+    <p>let arrayHola.splice(1, 2) </p>
+    <p>lo de arriba va a sacar "hello", y "konichiwa", y devolver eso. ahora arrayHola contiene ["hola", "oi", "ciao"] </p>
+    <p>let arrayHola.splice(1, 0, "Salut") </p>
+    <p>lo de arriba va a agregar "Salut" en la posicion 1 (donde ahora está "oi", sin removerlo), y lo demás se mueve a la derecha</p>
+    <p></p>
+
+    <h3>METODO: join</h3>
+    <p>sirve para transformar ARRAY en un string</p>
+
+    <h3>METODO: split</h3>
+    <p>al revés que join, sirve para transformar un string en un ARRAY </p>
+    <p>como parámetro, se pone LO QUE QUERÉS QUE IDENTIFIQUE COMO SEPARADOR DE ELEMENTOS DENTRO DEL ARRAY. si no le pones nada, te va a hacer un array con un elemento solo</p>
+    <p>let stringHola = "hola como estas"
+    stringHola.split() ========= stringHola== [hola como estas]</p>
+    <p>let stringHola = "hola como estas"
+        stringHola.split(" ") ========= stringHola=== [hola] [como] [estas]</p>
+
+<h3>METODO: filter</h3>
+<p>sirve para retornar un nuevo arreglo, con los datos filtardos segun la funcion que le pasemos por parametro</p>
+
+<h1>FOR</h1>
+<p>Otro elemento para hacer loop, como el while</p>
+<h4>Estructura:</h4>
+<p>for(variable a declarar; condicion; incrementador (ej: i++)</p>
+
+</p>
