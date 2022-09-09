@@ -27,90 +27,96 @@ function cadenaDeCaracteres(element) {
 
 
 //EJ 2
+function notasAlumnos() {
 
-let alumnos = [
-    {
-        nombre: "Mariano Damian",
-        apellido: "Hernandez",
-        notas: [8, 7, 9, 10, 6],
-    },
-    {
-        nombre: "Ramiro",
-        apellido: "Diaz",
-        notas: [1, 3, 8, 2, 1],
-    },
-    {
-        nombre: "Ana",
-        apellido: "Armella",
-        notas: [5, 7, 9, 4, 2],
-    },
-    {
-        nombre: "Romina",
-        apellido: "Almeda",
-        notas: [10, 6, 7, 5, 9],
-    },
-    {
-        nombre: "Denis",
-        apellido: "Tolaba",
-        notas: [10, 10, 9, 9, 10],
-    },
-    {
-        nombre: "Hugo",
-        apellido: "Castellano",
-        notas: [2, 3, 3, 6, 1],
-    },
-    {
-        nombre: "Analia Daiana",
-        apellido: "Fonseca",
-        notas: [4, 3, 4, 5, 2],
-    },
-    {
-        nombre: "Francisco Daniel",
-        apellido: "Samir",
-        notas: [5, 5, 6, 4, 2],
-    },
-];
-let estado;
+    let alumnos = [
+        {
+            nombre: "Mariano Damian",
+            apellido: "Hernandez",
+            notas: [8, 7, 9, 10, 6],
+        },
+        {
+            nombre: "Ramiro",
+            apellido: "Diaz",
+            notas: [1, 3, 8, 2, 1],
+        },
+        {
+            nombre: "Ana",
+            apellido: "Armella",
+            notas: [5, 7, 9, 4, 2],
+        },
+        {
+            nombre: "Romina",
+            apellido: "Almeda",
+            notas: [10, 6, 7, 5, 9],
+        },
+        {
+            nombre: "Denis",
+            apellido: "Tolaba",
+            notas: [10, 10, 9, 9, 10],
+        },
+        {
+            nombre: "Hugo",
+            apellido: "Castellano",
+            notas: [2, 3, 3, 6, 1],
+        },
+        {
+            nombre: "Analia Daiana",
+            apellido: "Fonseca",
+            notas: [4, 3, 4, 5, 2],
+        },
+        {
+            nombre: "Francisco Daniel",
+            apellido: "Samir",
+            notas: [5, 5, 6, 4, 2],
+        },
+    ];
+    let estado = prompt("Indique si quiere ver a los aprobados o a los desaprobados, escribiendo 'aprobado' o 'desaprobado'").toLowerCase();
 
-
-function promedio(alumnos, estado) {
-    for (let i = 0; i < 8; i++) {
-        let promedio = 0;
-        let suma = 0;
-
-        for (let h = 0; h < 5; h++) {
-            suma += alumnos[i].notas[h];
-        }
-        promedio = suma / 5;
-
-        if (promedio >= 6) {
-            alumnos[i].evaluacion = "aprobado";
-            alumnos[i].promedio = promedio;
-        }
-        else {
-            alumnos[i].evaluacion = "desaprobado";
-            alumnos[i].promedio = promedio;
+    if (estado != "aprobado" && estado != "desaprobado") {
+        while (estado != "aprobado" && estado != "desaprobado") {
+            estado = prompt("Por favor, introduzca solamente 'aprobado' o 'desaprobado'").toLowerCase()
         }
     }
 
-    if (estado == 'aprobado') {
-        for (let k = 0; k < alumnos.length; k++) {
-            if (alumnos[k].evaluacion == "aprobado") {
-                let key = "Nombre Completo: " + alumnos[k].nombre + ' ' + alumnos[k].apellido + " ";
-                console.log(key + alumnos[k].promedio + " Estado: Aprobado")
-            }
-        }
-    } else if (estado == 'desaprobado') {
-        for (let k = 0; k < alumnos.length; k++) {
-            if (alumnos[k].evaluacion == "desaprobado") {
-                let key = "Nombre Completo: " + alumnos[k].nombre + ' ' + alumnos[k].apellido + " ";
-                console.log(key + alumnos[k].promedio + " Estado: Desaprobado")
-            }
-        }
-    }
+    function promedio(alumnos, estado) {
+        for (let i = 0; i < 8; i++) {
+            let promedio = 0;
+            let suma = 0;
 
+            for (let h = 0; h < 5; h++) {
+                suma += alumnos[i].notas[h];
+            }
+            promedio = suma / 5;
+
+            if (promedio >= 6) {
+                alumnos[i].evaluacion = "aprobado";
+                alumnos[i].promedio = promedio;
+            }
+            else {
+                alumnos[i].evaluacion = "desaprobado";
+                alumnos[i].promedio = promedio;
+            }
+        }
+
+        if (estado == 'aprobado') {
+            for (let k = 0; k < alumnos.length; k++) {
+                if (alumnos[k].evaluacion == "aprobado") {
+                    let key = "Nombre Completo: " + alumnos[k].nombre + ' ' + alumnos[k].apellido + " ";
+                    console.log(key + alumnos[k].promedio + " Estado: Aprobado")
+                }
+            }
+        } else if (estado == 'desaprobado') {
+            for (let k = 0; k < alumnos.length; k++) {
+                if (alumnos[k].evaluacion == "desaprobado") {
+                    let key = "Nombre Completo: " + alumnos[k].nombre + ' ' + alumnos[k].apellido + " ";
+                    console.log(key + alumnos[k].promedio + " Estado: Desaprobado")
+                }
+            }
+        }
+
+    }
 }
-
 
 //EJ 3
 
