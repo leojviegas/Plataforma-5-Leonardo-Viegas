@@ -21,7 +21,7 @@ function contadorDeCaracteres() {
 
         let arrayTexto = texto.split(" ");
 
-        alert("El array contiene " + arrayTexto.length + " palabras"+ ".\n" + "La primer palabra es " + arrayTexto[0] + ".\n" + "La ultima palabra es " + arrayTexto[arrayTexto.length - 1]);//cantidad palabras
+        alert("El array contiene " + arrayTexto.length + " palabras"+ ".\n" + "La primer palabra es " + arrayTexto[0] + "\n" + "La ultima palabra es " + arrayTexto[arrayTexto.length - 1]);//cantidad palabras
         
     }
 }
