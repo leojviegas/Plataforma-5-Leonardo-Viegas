@@ -77,6 +77,8 @@ function notasAlumnos() {
         while (estado != "aprobado" && estado != "desaprobado") {
             estado = prompt("Por favor, introduzca solamente 'aprobado' o 'desaprobado'").toLowerCase()
         }
+    } else {
+        promedio(alumnos, estado)
     }
 
     function promedio(alumnos, estado) {
@@ -114,7 +116,7 @@ function notasAlumnos() {
                 }
             }
         }
-
+        alert("Mire la consola (con F12)")
     }
 }
 
