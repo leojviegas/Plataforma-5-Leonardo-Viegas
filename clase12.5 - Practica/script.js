@@ -105,7 +105,7 @@ function notasAlumnos() {
             for (let k = 0; k < alumnos.length; k++) {
                 if (alumnos[k].evaluacion == "aprobado") {
                     let key = "Nombre Completo: " + alumnos[k].nombre + ' ' + alumnos[k].apellido + " ";
-                    console.log(key + alumnos[k].promedio + " Estado: Aprobado")
+                    console.log(key + " Promedio: " + alumnos[k].promedio + " Estado: " + estado)
                 }
             }
         } else if (estado == 'desaprobado') {
