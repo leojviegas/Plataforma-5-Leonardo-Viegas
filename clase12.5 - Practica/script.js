@@ -13,17 +13,22 @@ Toda está información se deberá mostrar a través de console.log de manera in
 
 //EJ 1
 
-let texto = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex error adipisci autem doloribus beatae, laudantium explicabo ut aperiam aut quam facilis corporis optio velit! Vitae itaque reiciendis incidunt accusamus culpa"
+function contadorDeCaracteres() {
+    let texto = prompt("Introduzca un texto del largo que quiera (trate de solo incluir caracteres alfanuméricos)").toLowerCase();
+    cadenaDeCaracteres(texto);
 
-function cadenaDeCaracteres(element) {
-    let arrayTexto = element.split(" ");
+    function cadenaDeCaracteres(texto) {
 
-    console.log("El array contiene " + arrayTexto.length + " palabras");//cantidad palabras
-    console.log("La primer palabra es " + arrayTexto[0]);//primera
-    console.log("La ultima palabra es " + arrayTexto[arrayTexto.length - 1]);//ultima palabra
+        let arrayTexto = texto.split(" ");
 
+        console.log("El array contiene " + arrayTexto.length + " palabras");//cantidad palabras
+        console.log("La primer palabra es " + arrayTexto[0]);//primera
+        console.log("La ultima palabra es " + arrayTexto[arrayTexto.length - 1]);//ultima palabra
+
+        alert("Mire la consola")
+
+    }
 }
-
 
 
 //EJ 2
