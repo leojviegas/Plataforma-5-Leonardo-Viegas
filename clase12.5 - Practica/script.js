@@ -12,7 +12,7 @@ Toda está información se deberá mostrar a través de console.log de manera in
 */
 
 //EJ 1
-/*
+
 let texto = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex error adipisci autem doloribus beatae, laudantium explicabo ut aperiam aut quam facilis corporis optio velit! Vitae itaque reiciendis incidunt accusamus culpa"
 
 function cadenaDeCaracteres(element) {
@@ -24,10 +24,10 @@ function cadenaDeCaracteres(element) {
 
 }
 
-*/
+
 
 //EJ 2
-/*
+
 let alumnos = [
     {
         nombre: "Mariano Damian",
@@ -82,7 +82,7 @@ function promedio(alumnos, estado) {
             suma += alumnos[i].notas[h];
         }
         promedio = suma / 5;
-        
+
         if (promedio >= 6) {
             alumnos[i].evaluacion = "aprobado";
             alumnos[i].promedio = promedio;
@@ -100,7 +100,7 @@ function promedio(alumnos, estado) {
                 console.log(key + alumnos[k].promedio + " Estado: Aprobado")
             }
         }
-    } else if(estado == 'desaprobado') {
+    } else if (estado == 'desaprobado') {
         for (let k = 0; k < alumnos.length; k++) {
             if (alumnos[k].evaluacion == "desaprobado") {
                 let key = "Nombre Completo: " + alumnos[k].nombre + ' ' + alumnos[k].apellido + " ";
@@ -110,50 +110,39 @@ function promedio(alumnos, estado) {
     }
 
 }
-*/
+
 
 //EJ 3
-let grados = prompt("De Celsius a Fahrenhieit o viceversa");
 
-conversion(grados);
+function tempConverter() {
 
-function conversion(inputUser) {
-    inputUser.toLowerCase;
+    let inputUser = prompt("Convierta de Celsius a Fahrenhieit o viceversa").toLowerCase();
+
+
     let arrayTemp = inputUser.split("º");
     let temp = Number(arrayTemp[0]);
     let escala = arrayTemp[1];
 
     if (escala == "c") {
-        temp = (temp * 9/5) + 32;
+        temp = (temp * 9 / 5) + 32;
         alert(Math.round(temp) + "ºF");
-        
-        temp = (temp - 32) * 5/9;
+
+        temp = (temp - 32) * 5 / 9; //acá hacemos la cuenta inversa, para volver a tener el valor en celsius y seguir trabajando con eso
     }
     else {
-        temp = (temp - 32) * 5/9;
-        alert(Math.round(temp)+ "ºC");
+        temp = (temp - 32) * 5 / 9;
+        alert(Math.round(temp) + "ºC");
     }
-    
-    if (temp >= -10 && temp<= 0 ) {
+
+    if (temp >= -10 && temp <= 0) {
         alert("Temperatura baja");
-    }else if (temp >= 1 && temp <= 20) {
+    } else if (temp >= 1 && temp <= 20) {
         alert("Temperatura adecuada");
-    }else if (temp >= 21 && temp<= 35 ) {
+    } else if (temp >= 21 && temp <= 35) {
         alert("Temperatura alta");
-    }else{
+    } else {
         alert("Temperatura desconocida");
     }
-} 
-//yo termina la clase y me tengo que ir, copien el ejercicio y peguenselo y sigan en otra sesion de live share
-//GODINEZ
 
 
-
-
-
-// un super  gustazo gente!
-// igualmente amigo 
-//cuando quieran sale sesion de estudio, x discord 
-// de una jajajja
-//cierro el live share
-//dale
+}
