@@ -64,14 +64,3 @@ let autoelectrico1 = new AutoElectrico("chevrolet", "corsa", 2008, 4, "electrici
 
 
 
-function cuantoParaSabado() {
-
-    let date = new Date()
-                  
-    let day = ["domingo", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado"]
-
-    let diasParaSabado = 6 - date.getDay()
-
-
-    alert("Hoy es " + day[date.getDay()] + ". Faltan " + diasParaSabado + " días para el sábado.")
-}
