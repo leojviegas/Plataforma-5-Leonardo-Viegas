@@ -55,24 +55,23 @@ class AutoElectrico extends Auto {
     }
 }
 
-let autoGas1 = new AutoGas ("chevrolet", "corsa", 2008, 4, "gas")
+let autoGas1 = new AutoGas("chevrolet", "corsa", 2008, 4, "gas")
 
-let autoNafta1 = new AutoNafta ("chevrolet", "corsa", 2008, 4, "nafta")
+let autoNafta1 = new AutoNafta("chevrolet", "corsa", 2008, 4, "nafta")
 
-let autoelectrico1 = new AutoElectrico ("chevrolet", "corsa", 2008, 4, "electricidad")
-
-
-let date = new Date()
+let autoelectrico1 = new AutoElectrico("chevrolet", "corsa", 2008, 4, "electricidad")
 
 
-let month = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-  
-  let day = ["domingo", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado"]
 
 
-  day[date.getDay()];
-  
-  month[date.getMonth()];
+function cuantoParaSabado() {
+
+    let date = new Date()
+                  
+    let day = ["domingo", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado"]
+
+    let diasParaSabado = 6 - date.getDay()
+
+
+    alert("Hoy es " + day[date.getDay()] + ". Faltan " + diasParaSabado + " días para el sábado.")
+}
