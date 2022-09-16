@@ -6,19 +6,23 @@
   @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap');
 
+  @font-face {
+   font-family: 'FuenteCronica';
+   src: url(FuentesCronica/Impact-Font/impact.ttf) format('truetype')
+  }
+
  body {
     background-color: #a81a0e;
  }
  #h1 {
-    
     font-family: 'Roboto', sans-serif;
     font-style: italic;
     color: white;
     margin: 30px;
  }
  #h2 {
+   font-family: 'FuenteCronica', sans-serif;
     margin: 100px;
-    font-family: 'Days One', sans-serif;
     font-size: 50px;
     font-weight: 900;
     color: white;
