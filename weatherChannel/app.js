@@ -19,4 +19,4 @@ function cargarCiudad() {
 
 botonEnviar.addEventListener("click", cargarCiudad)
 
-// botonEnviar.addEventListener("click", cargarCiudad)
+// botonEnviar.addEventListener("click", cargarCiudad) f
