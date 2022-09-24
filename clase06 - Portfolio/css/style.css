@@ -7,28 +7,23 @@ body {
     font-size: 20px;
     background-color: lightblue;
 }
-.nav {
-    width: 100%;
-    background-color: lightcoral;
-    position:sticky;
-    top: 0;
-    color: red;
-    border: 20px;
-    border-color: white;
-    
+
+
+
+
+.navbar-brand {
+    font-size: 30px;
 }
 
-.item {
-    background-color: black;
-    border: 3px solid;
-    color: white;
-    padding: 12px;
-    
-}
-.flexContainer {
-    
-    height: 75px;
+.header {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.margin5 {
+    margin: 5%;
 }
