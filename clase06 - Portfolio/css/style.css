@@ -15,9 +15,7 @@ body {
     z-index: 1;
 }
 
-#portfolio {
-    margin: 2%;
-}
+
 
 .navbar-brand {
     font-size: 30px;
@@ -26,8 +24,7 @@ body {
 .header {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
+ 
 }
 
 .anchor {
@@ -40,6 +37,10 @@ h1 {
 
 .margin5 {
     margin: 5%;
+}
+
+.margin2 {
+    margin: 2%;
 }
 
 .div {
@@ -55,12 +56,13 @@ h1 {
 
 }
 
-.divFooter {
-    display: flex;
-    justify-content: center;
-    border: solid black;
-    align-items: center;
-    padding: 20px;
+/* .footer {
+    padding: 0 20%;
+} */
+.form {
+    width: 50%;
+    margin: auto;
+    min-width: 400px;
 }
 
 p {
