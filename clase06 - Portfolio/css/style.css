@@ -69,8 +69,18 @@ p {
     margin: 0;
 }
 
+#mensaje {
+    height: 120px;
+    overflow-wrap: break-word;
+}
+
+
+
+
 .copyright {
+    background-color: rgb(15, 85, 97);
+    color: white;
     text-align: center;
-    margin: 2%;
     font-size: 1rem;
+    padding: 2%;
 }
