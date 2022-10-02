@@ -51,7 +51,7 @@ button:hover {
   border-radius: 20px;
   margin-left: 50px;
   visibility : hidden;
-  margin: 50px auto;
+  margin: 50px auto ;
 }
 
 .ciudades {
@@ -60,6 +60,10 @@ button:hover {
 
 #ciudad {
   font-size: 2rem;
+  color: #717681;
+}
+#pais {
+  font-size: 1rem;
   color: #717681;
 }
 
@@ -85,4 +89,11 @@ img {
 
 .encabezado {
   text-align: center;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  
 }
