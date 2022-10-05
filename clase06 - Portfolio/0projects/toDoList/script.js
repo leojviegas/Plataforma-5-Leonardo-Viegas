@@ -36,10 +36,9 @@ class Item {
       botonEditar.innerHTML = "<i class='fas fa-lock-open'></i>";
     })
 
-
-
   }
 }
+
 
 //Fines experimentales
 function crearDiv(userInputText) {
@@ -72,6 +71,24 @@ function crearDiv(userInputText) {
   })
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function agregarDiv(){
 
