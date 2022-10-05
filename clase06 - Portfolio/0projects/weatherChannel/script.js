@@ -58,8 +58,7 @@ inputUser.addEventListener("keypress", function (event) {
 
 updateYear()
 
-
-//para ir al nombre en español del pais correspondiente:
+//para ir al nombre en español en la 2da API del pais correspondiente:
 //data[0].translations.spa.common
 
 
