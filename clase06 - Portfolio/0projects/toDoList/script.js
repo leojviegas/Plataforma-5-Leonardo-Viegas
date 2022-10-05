@@ -1,118 +1,89 @@
-const input = document.querySelector(".input");
+const mainInput = document.querySelector(".mainInput");
 const botonAgregar = document.querySelector(".botonAgregar");
 const container = document.querySelector(".container");
 
+
 class Item {
-  constructor(nuevaTarea) {
-    this.crearDiv(nuevaTarea);
-  }
-  crearDiv(userInputText) {
-    const container = document.querySelector(".container"); //agarro el div "container"
-    const inputItem = document.createElement("input");
-    inputItem.setAttribute("type", "text");
-    inputItem.setAttribute("disabled", "true");
-    inputItem.classList.add("itemInput");
-    inputItem.setAttribute("value", nuevaTarea);
+    constructor(nuevaTarea) {
+        this.crearDiv(nuevaTarea);
+    }
+    crearDiv(nuevaTarea) {
+        let item = document.createElement("div") //creo el item
+        item.classList.add("item") //seteo atributos y clase
 
-    const divItem = document.createElement("div")
-    divItem.classList.add("item");
+        let itemInput = document.createElement("input") //creo el input
 
-    const botonEditar = document.createElement("button")
-    botonEditar.innerHTML = '<i class="fa-solid fa-lock"></i>'
-    botonEditar.classList.add("botonEditar");
+        itemInput.setAttribute("type", "text");//seteo atributos y clase
+        itemInput.setAttribute("disabled", "true");
+        itemInput.classList.add("itemInput");
+        itemInput.setAttribute("value", nuevaTarea);
 
-    const botonRemover = document.createElement("button")
-    botonRemover.innerHTML = '<i class="fa-solid fa-trash-can">'
-    botonRemover.classList.add("botonRemover");
+        let botonEditar = document.createElement("button") //creo boton editar
+        botonEditar.innerHTML = '<i class="fa-solid fa-lock"></i>'
+        botonEditar.classList.add("botonEditar");
 
-    divItem.appendChild(inputItem);
-    divItem.appendChild(botonEditar);
-    divItem.appendChild(botonRemover);
-    container.appendChild(divItem);
+        let botonRemover = document.createElement("button") //creo boton remover
+        botonRemover.innerHTML = '<i class="fa-solid fa-trash-can">'
+        botonRemover.classList.add("botonRemover");
 
-    botonEditar.addEventListener("click", () => {
-      // inputItem.setAttribute("disabled", "false");
-      !input.disabled
-      botonEditar.innerHTML = "<i class='fas fa-lock-open'></i>";
-    })
+        item.appendChild(itemInput) //apendizo input y botones al container
+        item.appendChild(botonEditar)
+        item.appendChild(botonRemover)
+        container.appendChild(item) //apendizo el item al container
 
-  }
+        botonEditar.addEventListener("click", () => {
+            itemInput.disabled = !itemInput.disabled
+
+            if (itemInput.disabled == false) {
+                botonEditar.innerHTML = "<i class='fas fa-lock-open'></i>";
+               
+                itemInput.select();
+
+            } else {
+                botonEditar.innerHTML = '<i class="fa-solid fa-lock"></i>'
+            }
+        })
+        itemInput.addEventListener("keypress", (event) => {
+            if (event.key === "Enter") {
+                botonEditar.click();
+            }
+        });
+
+        botonRemover.addEventListener("click", () => {
+            container.removeChild(item)
+        })
+    }
 }
 
+//con esta funcion  instancio la clase (creo el objeto)
+function chequearInput() {
+    let nuevaTarea = mainInput.value
+    if (nuevaTarea != "") {
 
-//Fines experimentales
-function crearDiv(userInputText) {
-  const container = document.querySelector(".container"); //agarro el div "container"
-  const inputItem = document.createElement("input");
-  inputItem.setAttribute("type", "text");
-  inputItem.setAttribute("disabled", "true");
-  inputItem.classList.add("itemInput");
-  inputItem.setAttribute("value", userInputText);
+        new Item(nuevaTarea)
+        mainInput.value = ""
+    } else {
 
-  const divItem = document.createElement("div")
-  divItem.classList.add("item");
-
-  const botonEditar = document.createElement("button")
-  botonEditar.innerHTML = '<i class="fa-solid fa-lock"></i>'
-  botonEditar.classList.add("botonEditar");
-
-  const botonRemover = document.createElement("button")
-  botonRemover.innerHTML = '<i class="fa-solid fa-trash-can">'
-  botonRemover.classList.add("botonRemover");
-
-  divItem.appendChild(inputItem);
-  divItem.appendChild(botonEditar);
-  divItem.appendChild(botonRemover);
-  container.appendChild(divItem)
-  botonEditar.addEventListener("click", () => {
-    // inputItem.setAttribute("disabled", "false");
-    inputItem.disabled = !inputItem.disabled
-    botonEditar.innerHTML = "<i class='fas fa-lock-open'></i>";
-  })
+        alert("El campo no puede quedar vacío")
+    }
 
 }
 
+//el 1er eventListener es para hacer click sobre el boton
+//el 2do es para poder darle al Enter cuando tenes seleccionado el input
+botonAgregar.addEventListener("click", chequearInput)
+mainInput.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        botonAgregar.click();
+    }
+});
 
 
+//esta función cambia el año del copyright al año actual, así siempre va a estar actualizado
+function updateYear() {
+    let yearSpan = document.getElementById("yearSpan")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function agregarDiv(){
-
-// }
-
-// <button class="botonEditar"><i class="fa-solid fa-lock"></i></button>
-// <button class="botonRemover"></i></button>
-
-//     const container = document.querySelector(".container"); //agarro el div "container"
-// //para.innerHTML = "This is a paragraph.";
-// // Create element:
-// const item = document.createElement("div"); //creo otro div "item"
-
-// container.appendChild(item); //le meto el div "item" como child adentro del "container" ahora repetir con los otros elementos:
-// const itemInput = document.createElement("input")
-
-// item.appendChild(itemInput);
-
-//Legacy code
-//<div class="item">
-// <input
-//   type="text"
-//   class="itemInput"
-//   disabled
-//   value="Regar las plantas, TEXTO DE PRUEBA"
-// />
-//      </div>
+    const currentYear = new Date().getFullYear();
+    yearSpan.innerHTML = currentYear;
+}
+updateYear()

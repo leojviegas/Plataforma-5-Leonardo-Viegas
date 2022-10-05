@@ -6,6 +6,11 @@ body {
     font-size: 30px;
 }
 
+.container {
+    display: flex;
+
+}
+
 .item1 {
     background-color: red;
 }
@@ -20,7 +25,3 @@ body {
     color: black;
 }
 
-.container {
-    display: flex;
-
-}

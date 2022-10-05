@@ -80,11 +80,11 @@ p {
 
 
 
-
 .copyright {
     background-color: rgb(15, 85, 97);
     color: white;
     text-align: center;
     font-size: 1rem;
-    padding: 2%;
+    padding: 1%;
+    font-family: Arial, Helvetica, sans-serif;
 }
