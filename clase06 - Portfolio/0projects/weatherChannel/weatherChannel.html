@@ -10,12 +10,17 @@
 </head>
 
 <body>
-    <div class="encabezado">
-        <h1>Weather Channel</h1>
+
+
+    <h1>Weather Channel</h1>
+
+
+    <nav class="encabezado">
         <input id="inputUser" type="text" placeholder="Ingresá una ciudad" value="">
         <button id="botonEnviar">ENVIAR</button>
-    </div>
-    <div class="container">
+    </nav>
+
+    <main class="container">
         <ul class="ciudades">
             <li>
                 <span id="ciudad"></span><br>
@@ -25,16 +30,14 @@
                 <span id="descripcion"></span><br>
             </li>
         </ul>
-    </div>
+    </main>
 
-    <div class="copyright">
+    <footer class="copyright">
         <p> © <span id="yearSpan">2022</span> - Leonardo Joaquin Viegas</p>
-    </div>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./script.js"></script>
-
-
-
 </body>
 
 </html>
