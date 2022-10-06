@@ -92,12 +92,9 @@ h1 {
 }
 
 .copyright {
-    width: 100%;
-    color: white;
-    text-align: center;
-    font-size: 1rem;
-    padding: 2%;
-    justify-self: end;
     margin-top: auto;
+    padding: 30px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: white;
 }
