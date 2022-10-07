@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(62, 62, 62);
+    color: white;
+    text-align: center;
+    font-family: monospace;
+
+}
+
+.container {
+    background-color: rgb(102, 33, 26);
+    border-radius: 15px;
+    font-family: monospace;
+
+}
+.input {
+    width: 200px;
+    height: 50px;
+    font-size: 50px;
+    font-family: monospace;
+}
