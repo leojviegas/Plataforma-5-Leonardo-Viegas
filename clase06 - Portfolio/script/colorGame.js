@@ -4,33 +4,43 @@ let h1 = document.querySelector(".h1")
 let colorDisplay = document.getElementById("colorDisplay")
 let message = document.getElementById("message")
 let botonReset = document.getElementById("reset")
-let botonEasy = document.getElementById("easyButton")
-let botonHard = document.getElementById("hardButton")
+// let botonEasy = document.getElementById("easyButton")
+// let botonHard = document.getElementById("hardButton")
+let modeButtons = document.querySelectorAll(".modeButton")
 let numberOfSquares = 6
 let arrayColors = []
 let pickedColor = ""
 
 botonReset.addEventListener("click", reset)
 
-botonEasy.addEventListener("click", function () {
-    this.classList.add("selected")
-    botonHard.classList.remove("selected")
-    numberOfSquares = 3
-    for (let i = 3; i >= 3 && i <= 5; i++) {
-        arraySquares[i].style.display = "none"
-    }
-    reset()
+
+modeButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+        this.classList.add("selected")
+        for (let i = 0; i < modeButtons.length; i++) {
+            if (modeButtons[i] != this) {
+                modeButtons[i].classList.remove("selected")
+            }
+        }
+        if (button.textContent == "Hard") {
+            numberOfSquares = 6
+            for (let i = 0; i < arraySquares.length; i++) {
+                arraySquares[i].style.display = "block"
+            }
+        } else {
+            numberOfSquares = 3
+            for (let i = 3; i >= 3 && i <= 5; i++) {
+                arraySquares[i].style.display = "none"
+            }
+        }
+        reset()
+    })
 })
 
-botonHard.addEventListener("click", function () {
-    this.classList.add("selected")
-    botonEasy.classList.remove("selected")
-    numberOfSquares = 6
-    for (let i = 0; i < arraySquares.length; i++) {
-        arraySquares[i].style.display = "block"
-    }
-    reset()
-})
+
+
+
+
 
 function reset() {
     arrayColors = generateRandomColors(numberOfSquares)
@@ -96,3 +106,26 @@ function updateYear() {
 updateYear()
 
 reset()
+
+
+//CODIGO BOTONES antes de refactorizar:
+
+// botonEasy.addEventListener("click", function () {
+//     this.classList.add("selected")
+//     botonHard.classList.remove("selected")
+//     numberOfSquares = 3
+//     for (let i = 3; i >= 3 && i <= 5; i++) {
+//         arraySquares[i].style.display = "none"
+//     }
+//     reset()
+// })
+
+// botonHard.addEventListener("click", function () {
+//     this.classList.add("selected")
+//     botonEasy.classList.remove("selected")
+//     numberOfSquares = 6
+//     for (let i = 0; i < arraySquares.length; i++) {
+//         arraySquares[i].style.display = "block"
+//     }
+//     reset()
+// })
