@@ -1,3 +1,4 @@
+let yearSpan = document.getElementById("yearSpan")
 let arraySquares = document.querySelectorAll(".square")
 let h1 = document.querySelector(".h1")
 let colorDisplay = document.getElementById("colorDisplay")
@@ -5,23 +6,34 @@ let message = document.getElementById("message")
 let botonReset = document.getElementById("reset")
 let botonEasy = document.getElementById("easyButton")
 let botonHard = document.getElementById("hardButton")
-let amountOfSquares = 6
+let numberOfSquares = 6
 let arrayColors = []
 let pickedColor = ""
 
 botonReset.addEventListener("click", reset)
 
-botonEasy.addEventListener("click", function() {
+botonEasy.addEventListener("click", function () {
     this.classList.add("selected")
     botonHard.classList.remove("selected")
+    numberOfSquares = 3
+    for (let i = 3; i >= 3 && i <= 5; i++) {
+        arraySquares[i].style.display = "none"
+    }
+    reset()
 })
-botonHard.addEventListener("click", function() {
+
+botonHard.addEventListener("click", function () {
     this.classList.add("selected")
     botonEasy.classList.remove("selected")
+    numberOfSquares = 6
+    for (let i = 0; i < arraySquares.length; i++) {
+        arraySquares[i].style.display = "block"
+    }
+    reset()
 })
 
 function reset() {
-    arrayColors = generateRandomColors(amountOfSquares)
+    arrayColors = generateRandomColors(numberOfSquares)
     pickedColor = pickColor()
     colorDisplay.innerHTML = pickedColor
     for (let i = 0; i < arraySquares.length; i++) {
@@ -41,8 +53,8 @@ function compareColors() {
         message.innerHTML = "Correcto!"
         h1.style.backgroundColor = clickedColor
         changeColorsToWinner(clickedColor)
-        botonReset.innerHTML = "Play again?"
-        
+        botonReset.innerHTML = "Jugar de nuevo"
+
 
     } else {
         this.style.backgroundColor = document.body.style.backgroundColor
@@ -76,5 +88,11 @@ function generateRandomColors(x) {
     }
     return array
 }
+
+function updateYear() {
+    const currentYear = new Date().getFullYear();
+    yearSpan.innerHTML = currentYear
+}
+updateYear()
 
 reset()

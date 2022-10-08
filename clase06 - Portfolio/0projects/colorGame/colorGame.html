@@ -11,29 +11,39 @@
 
 <body>
     <h1 class="h1">
-        The Great
+        The Great<br>
         <span id="colorDisplay">
             <!-- El codigo RGB del color ganador -->
-        </span>
+        </span><br>
         Guessing Game
     </h1>
+
     <div id="stripe">
-        <span id="message">
-            <!-- Aquí va el mensaje de intentalo nuevamente o correcto -->
-        </span>
         <button id="reset">Nuevos Colores</button>
+        <div id="spanDiv">
+            <span id="message">
+                <!-- Aquí va el mensaje de intentalo nuevamente o correcto -->
+            </span>
+        </div>
+        <div id="buttonContainer">
+            <button id="easyButton">Easy</button>
+            <button id="hardButton" class="selected">Hard</button>
+        </div>
     </div>
-    <button id="easyButton">Easy</button>
-    <button class="selected" id="hardButton">Hard</button>
 
     <div class="container">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
+        <div class="square div1"></div>
+        <div class="square div2"></div>
+        <div class="square div3"></div>
+        <div class="square div4"></div>
+        <div class="square div5"></div>
+        <div class="square div6"></div>
     </div>
+
+    <footer class="copyright">
+        <p> © <span id="yearSpan">2022</span> - Leonardo Joaquin Viegas</p>
+    </footer>
+
 
     <script src="./script.js"></script>
 </body>
