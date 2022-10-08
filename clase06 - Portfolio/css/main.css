@@ -4,20 +4,34 @@
     box-sizing: border-box;
 }
 
+.esteban {
+    font-family: 'Esteban', serif;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
 body {
     font-size: 20px;
     background-color: lightblue;
 }
 
 .navbar {
+    display: flex;
     position: sticky;
     top: 0;
     z-index: 1;
 }
 
+.visible {}
+
+.miFoto {
+    border-radius: 50%;
+}
 
 .no-style {
-    color: black;
+    color: rgb(19, 7, 7);
     text-decoration: none;
 }
 
@@ -28,7 +42,7 @@ body {
 .header {
     display: flex;
     justify-content: center;
- 
+
 }
 
 .anchor {
@@ -53,6 +67,7 @@ h1 {
     padding: 5px;
 }
 
+
 .p {
     margin: 5px;
     border: solid 1px red;
@@ -75,11 +90,16 @@ p {
     overflow-wrap: break-word;
 }
 
+.card {
+    background-color: lightblue;
+    border: none;
+}
+
 
 .copyright {
     background-color: rgb(15, 85, 97);
     margin-top: auto;
-    padding: 30px;
+    padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     text-align: center;

@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+.esteban {
+    font-family: 'Esteban', serif;
+}
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
 body {
     display: flex;
     flex-direction: column;
